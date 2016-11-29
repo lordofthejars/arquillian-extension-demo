@@ -45,9 +45,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.tomee</groupId>
-            <artifactId>arquillian-tomee-remote</artifactId>
-            <version>7.0.0</version>
+            <groupId>org.arquillian.container</groupId>
+            <artifactId>arquillian-container-chameleon</artifactId>
+            <version>1.0.0.Alpha7</version>
             <scope>test</scope>
         </dependency>
         <dependency>

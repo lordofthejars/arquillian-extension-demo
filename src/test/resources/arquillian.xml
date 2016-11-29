@@ -4,4 +4,10 @@
         <property name="deploymentExportPath">target/deployment</property>
     </engine>
 
+    <container qualifier="chameleon" default="true">
+        <configuration>
+            <property name="chameleonTarget">wildfly:9.0.0.Final:managed</property>
+        </configuration>
+    </container>
+
 </arquillian>

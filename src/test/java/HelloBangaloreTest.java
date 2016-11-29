@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @RunWith(Arquillian.class)
 public class HelloBangaloreTest {
 
-    @Deployment(testable = false)
+    @Deployment
     public static JavaArchive createDeployment() {
         return ShrinkWrap.create(JavaArchive.class)
                 .addClass(MySuperPojo.class)
