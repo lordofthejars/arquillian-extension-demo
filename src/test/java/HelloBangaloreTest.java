@@ -3,8 +3,11 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import javax.inject.Inject;
 
 @RunWith(Arquillian.class)
 public class HelloBangaloreTest {
@@ -16,9 +19,13 @@ public class HelloBangaloreTest {
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
+    @Inject
+    private MySuperPojo pojo;
+
     @Test
     public void helloBangalore() {
-        System.out.println("Hello World From Bangalore.");
+        Assert.assertNotNull(pojo);
+        pojo.printMessage();
     }
 
 }
